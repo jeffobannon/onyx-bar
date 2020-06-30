@@ -1,0 +1,478 @@
+body {
+    display: grid;
+    max-width: 1600px;
+}
+
+.schedule-header__container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 1600px;
+    background: #F4F5F6;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
+    padding: 2vh 0 1vh 0;
+    z-index: 3;
+}
+
+.schedule-header__container div {
+    align-self: center;
+}
+
+#schedule__title-1 {
+    background: #2F3537;
+    color: white;
+    padding: 0.4rem 0.4rem 0.4rem 0.7rem;
+    letter-spacing: 0.25rem;
+    font-weight: 600;
+}
+
+#schedule__title-2 {
+    background: white;
+    padding: 0.4rem 0.4rem 0.4rem 0.7rem;
+    border: 3px solid #2F3537;
+    letter-spacing: 0.25rem;
+    font-weight: 600;
+}
+
+.schedule-main__container {
+    display: grid;
+    margin-top: 14vh;
+}
+
+.schedule-main__container div {
+    width: 75vw;
+    height: 75vw;
+    max-width: 400px;
+    max-height: 400px;
+    justify-self: center;
+    margin-top: 6vh;
+}
+
+div > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.3);
+}
+
+#image-coltrane,
+#image-lockjaw,
+#image-cannonball,
+#image-milt {
+    margin-top: 2.5vh;
+}
+
+#image-monk img {
+    object-position: -30px 0;
+}
+
+#image-lockjaw img,
+#image-nancy img,
+#image-cannonball img {
+    object-position: right top;
+}
+
+#image-bill img {
+    object-position: -40px 0;
+}
+
+#image-ornette {
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.article__content {
+    text-align: center;
+    margin: 2vh auto 0 auto;
+}
+
+.article__content a:link,
+.article__content a:visited {
+    color: #2F3537;
+    text-decoration: none;
+}
+
+.article__content a:hover,
+.article__content a:active {
+    color: #858585;
+    text-decoration: none;
+}
+
+.article__content a:focus {
+    outline: none;
+    color: #858585;
+}
+
+.section__container-link a:focus {
+    outline: none;
+}
+
+a h2 {
+    font-size: clamp(1rem, 7vw, 1.9rem);
+    font-weight: 500;
+}
+
+a h3 {
+    font-size: clamp(1rem, 3.5vw, 1rem);
+    font-weight: 300;
+}
+
+.section__container-link {
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    padding: 4rem 4rem 2rem 4rem;
+    margin: 0 auto;
+    font-size: clamp(1.4rem, 7vw, 1.7rem);
+    justify-content: center;
+}
+
+.section__container-link a {
+    text-decoration: none;
+    color: #2F3537;
+}
+
+.section__container-link a:nth-of-type(2) {
+    display: flex;
+    align-self: center;
+}
+
+.link-title-1 {
+    background: #2F3537;
+    color: white;
+    border: 2px solid #2F3537;
+    font-size: 1.17em !important;
+    font-weight: 700 !important;
+}
+
+.link-title-2 {
+    display: inline;
+    background: white;
+    text-align: center;
+    border: 3px solid #2F3537;
+    font-size: 1.17em !important;
+    font-weight: 700 !important;
+}
+
+@media (min-width: 650px) {
+
+    .schedule-header__container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 2vh 0 2vh 0;
+    }
+
+    .schedule-main__container {
+        grid-template-columns: repeat(3, minmax(230px, 325px));
+    }
+
+    .schedule-main__container div {
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    #image-coltrane,
+    #image-lockjaw,
+    #image-cannonball,
+    #image-milt {
+        margin-top: 6vh;
+    }
+
+    div > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .article__content {
+        text-align: center;
+        margin: 2vh 0 0 0;
+    }
+
+    #content-rollins,
+    #content-blakey,
+    #content-jimmy,
+    #content-bill,
+    #content-lee {
+        text-align: left;
+    }
+
+    #content-ahmad,
+    #content-mingus,
+    #content-dexter,
+    #content-miles,
+    #content-ornette {
+        text-align: right; 
+    }
+
+    #content-jimmy,
+    #content-bill,
+    #content-lee {
+        align-self: flex-start;
+    }
+
+    #content-ahmad,
+    #content-mingus,
+    #content-dexter,
+    #content-miles,
+    #content-ornette {
+        align-self: flex-end;
+    }
+
+    #content-monk,
+    #content-griffin,
+    #content-nancy,
+    #content-oscar {
+        align-self: center;
+        justify-self: center;
+    }
+
+    #content-rollins {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #content-ahmad {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #content-blakey {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        margin-top: 0;
+    }
+
+    #content-mingus {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    #content-jimmy {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+
+    #content-dexter {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+
+    #content-bill {
+        grid-column: 2 / 3;
+        grid-row: 7 / 8;
+    }
+
+    #content-miles {
+        grid-column: 2 / 3;
+        grid-row: 7 / 8;
+    }
+
+    #content-lee {
+        grid-column: 2 / 3;
+        grid-row: 9 / 10;
+    }
+
+    #content-ornette {
+        grid-column: 2 / 3;
+        grid-row: 9 / 10;
+    }
+
+    .section__container-link {
+        padding-top: 6rem;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .schedule-main__container {
+        grid-template-columns: repeat(4, minmax(250px, 450px));
+    }
+
+    .schedule-main__container div {
+        width: 22vw;
+        height: 22vw;
+    }
+    
+    div > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .article__content {
+        align-self: center;
+        padding: 1rem;
+    }
+
+    #content-ahmad,
+    #content-mingus,
+    #content-jimmy,
+    #content-dexter,
+    #content-bill,
+    #content-miles,
+    #content-lee,
+    #content-ornette {
+        align-self: center;
+    }
+
+    #image-monk,
+    #image-coltrane,
+    #image-griffin,
+    #image-lockjaw,
+    #image-nancy,
+    #image-cannonball,
+    #image-oscar,
+    #image-milt{
+        justify-self: center;
+    }
+
+    #content-jimmy,
+    #content-dexter,
+    #content-bill,
+    #content-miles {
+        justify-self: right;
+    }
+
+    #content-ahmad,
+    #content-mingus,
+    #content-ornette {
+        text-align: left;
+    }
+
+    #content-jimmy,
+    #content-bill {
+        text-align: right;
+    }
+
+    #content-rollins {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #content-ahmad {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+    }
+
+    #image-monk {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #content-monk {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    #image-coltrane {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+
+    #content-mingus {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+    }
+
+    #image-griffin {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+
+    #content-griffin {
+        grid-column: 2 / 4;
+        grid-row: 4 / 5;
+    }
+
+    #image-lockjaw {
+        grid-column: 3 / 5;
+        grid-row: 4 / 5;
+    }
+
+    #content-jimmy {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    #image-jimmy {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+
+    #content-dexter {
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
+    }
+
+    #image-dexter {
+        grid-column: 4 / 5;
+        grid-row: 5 / 6;
+    }
+
+    #image-nancy {
+        grid-column: 1 / 3;
+        grid-row: 6 / 7;
+    }
+
+    #content-nancy {
+        grid-column: 2 / 4;
+        grid-row: 6 / 7;
+    }
+
+    #image-cannonball {
+        grid-column: 3 / 5;
+        grid-row: 6 / 7;
+    }
+
+    #content-bill {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+    }
+
+    #image-bill {
+        grid-column: 2 / 3;
+        grid-row: 7 / 8;
+    }
+
+    #image-miles {
+        grid-column: 4 / 5;
+        grid-row: 7 / 8;
+    }
+
+    #content-miles {
+        grid-column: 3 / 4;
+        grid-row: 7 / 8;
+    }
+
+    #image-oscar {
+        grid-column: 1 / 3;
+        grid-row: 8 / 9;
+    }
+
+    #content-oscar {
+        grid-column: 2 / 4;
+        grid-row: 8 / 9;
+    }
+
+    #image-milt {
+        grid-column: 3 / 5;
+        grid-row: 8 / 9;
+    }
+
+    #image-lee {
+        grid-column: 1 /2;
+        grid-row: 9 / 10;
+    }
+
+    #image-ornette {
+        grid-column: 3 / 4;
+        grid-row: 9 / 10;
+    }
+
+    #content-ornette {
+        grid-column: 4 / 5;
+        grid-row: 9 / 10;
+    }
+}

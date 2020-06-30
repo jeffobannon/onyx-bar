@@ -1,0 +1,94 @@
+body {
+    height: 100vh;
+}
+
+.header__container {
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    padding: 3rem 4rem 2rem 4rem;
+    margin: 0 auto;
+    font-size: clamp(1.4rem, 7vw, 1.7rem);
+}
+
+header div:nth-of-type(2) {
+    align-self: center;
+}
+
+#header__title-1 {
+    background: #2F3537;
+    color: white;
+    border: 2px solid #2F3537;
+    font-weight: 700;
+}
+
+#header__title-2 {
+    display: inline;
+    background: white;
+    text-align: center;
+    border: 3px solid #2F3537;
+    font-weight: 700;
+}
+
+.main__nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0.2rem;
+}
+
+.main__nav-link {
+    font-size: clamp(0.8rem, 6vw, 1rem);
+    font-weight: 400;
+    padding: 0.5rem; 
+    margin: 0.13rem 0.13rem 0.9rem 0.13rem;
+}
+
+.main__nav-link a {
+    padding: 0.5rem; 
+    border: 1px solid #2F3537;
+}
+
+
+.main__nav-link a:link,
+.main__nav-link a:visited {
+    color: #2F3537;
+    text-decoration: none;
+}
+
+.main__nav-link a:active,
+.main__nav-link a:hover {
+    background: #2F3537;
+    color: #F4F5F6;
+    text-decoration: none;
+}
+
+.main__nav-link a:focus {
+    outline: 1px solid #2F3537;
+}
+
+@media (min-width: 650px) {
+    .main__nav {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .header__container {
+        font-size: clamp(1.5rem, 7vw, 2.3rem);
+        padding-top: 6rem;
+    }    
+
+    .main__nav-link {
+        font-size: clamp(0.8rem, 4vw, 1.2rem);
+    }
+
+    .footer__container {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+}

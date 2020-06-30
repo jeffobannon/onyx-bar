@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ONYX BAR Reservations</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <h1>Reservations</h1>
+    <main>
+        <form action="" class="reservation-form">
+            <div>
+                <label for="reservation-date">Reservation Date</label>
+                <input type="date" id="reservation-date" value="1961-06-01" min="1961-01-01" max="1961-12-31">
+            </div> 
+            <div class="set-time">  
+                <p>Set Time</p>
+                <div class="set-time__checkbox">
+                    <input type="checkbox" id="set-time">
+                    <label for="set-time">8 PM</label>
+                    <input type="checkbox" id="set-time">
+                    <label for="set-time">10 PM</label>
+                </div>
+            </div> 
+            <div class="tickets">
+                <label for="tickets">Number of Tickets</label>
+                <select name="tickets" id="tickets">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first">
+            </div>
+            <div>
+                <label for="last">Last Name</label>
+                <input type="text" id="last">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input type="text" id="address">
+            </div>
+            <div>
+                <label for="city">City</label>
+                <input type="text" id="city">
+            </div>
+            <div>
+                <label for="state">State</label>
+                <input type="text" id="state">
+            </div>
+            <div>  
+                <label for="zip">Zip</label>
+                <input type="text" id="zip">
+            </div>
+            <div>  
+                <label for="cc">Credit Card</label>
+                <input type="text" id="cc">
+            </div> 
+            <div> 
+                <label for="card-name">Name On Card</label>
+                <input type="text" id="card-name">
+            </div>
+            <div>
+                <label for="expire">Expiration Date</label>
+                <input type="text" id="expire">
+            </div>
+            <div>
+                <label for="security">CCV</label>
+                <input type="text" id="security">
+            </div>   
+            <div class="security">
+                <input type="checkbox" id="agree">
+                <label for="agree">Agree to Terms and Conditions</label>
+            </div>
+            <div class="button__container">
+                <button type="submit" class="submit">submit</button>
+            </div>
+        </form>
+    </main>
+    <section>
+        <div class="section__container-link">
+            <a href="main.html">
+                <h3 class="link-title-1">ONYX</h3>
+            </a>    
+            <a href="main.html">
+                <h3 class="link-title-2">BAR</h3>
+            </a>
+        </div>
+    </section>
+    <footer class="footer__container">
+        <h4>417 Rose Avenue</h4>
+        <h4>Los Angeles CA</h4>
+    </footer>
+</body>
+
+
